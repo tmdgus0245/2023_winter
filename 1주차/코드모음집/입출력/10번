@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main() {
+    int a;
+    char b[4];
+    scanf("%d", &a);
+    scanf("%s", b);
+    int c = a * ((int)b[2] - 48), d = a * ((int)b[1] - 48), e = a * ((int)b[0] - 48);
+    printf("%d\n%d\n%d\n%d",c,d,e,c+d*10+e*100);
+}
