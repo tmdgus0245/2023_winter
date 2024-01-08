@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main() {
+	int n,a,b,c=1;
+	scanf("%d", &n);
+	for (c; c<=n; c++) {
+		scanf("%d %d", &a, &b);
+		printf("Case #%d: %d + %d = %d\n", c,a,b,a + b);
+	}
+}
