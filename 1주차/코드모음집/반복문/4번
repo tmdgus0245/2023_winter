@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main() {
+	int sum,item,n,t,sum2=0;
+	scanf("%d", &sum);
+	scanf("%d", &n);
+	for (n; n>0; n--) {
+		scanf("%d %d", &item, &t);
+		sum2 += item * t;
+	}
+	if (sum == sum2) {
+		printf("Yes");
+	}
+	else {
+		printf("No");
+	}
+}
