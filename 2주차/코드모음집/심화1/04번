@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+	int a;
+	char word[100];
+	scanf("%s", word);
+	for (a = strlen(word) / 2; a > 0; a--) {
+		if (word[a - 1] != word[strlen(word) - a]) {
+			printf("0");
+			break;
+		}
+	}
+	if (a == 0) {
+		printf("1");
+	}
+}
