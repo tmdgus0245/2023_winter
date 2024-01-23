@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int N,M,array[1000];
+    scanf("%d", &N);
+    for (int a = 0; a < N; a++) {
+        scanf("%d", &array[a]);
+    }
+    M = array[0];
+    for (int a = 1; a < N; a++) {
+        if (M < array[a]) {
+            M = array[a];
+        }
+    }
+    int sum = 0;
+    for (int a = 0; a < N; a++) {
+        sum += array[a];
+    }
+    printf("%f", (float)sum /N/M*100);
+}
