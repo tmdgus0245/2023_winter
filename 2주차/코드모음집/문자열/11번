@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+	char str[101];
+	int a = 100;
+	while (gets(str) != NULL && a){
+		printf("%s\n",str);
+		a--;
+	}
+}
