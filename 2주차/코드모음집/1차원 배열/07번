@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int array[30] = { 0, },x;
+    for (int a = 28; a > 0; a--) {
+        scanf("%d", &x);
+        array[x - 1] = 1;
+    }
+    for (int a = 0; a < 30; a++) {
+        if (array[a] == 0) {
+            printf("%d\n", a + 1);
+        }
+    }
+} 
