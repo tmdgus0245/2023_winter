@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+	int lengthofword;
+	char word[100];
+	scanf("%s", word);
+	lengthofword = strlen(word);
+	for (int b = 0; word[b] != 0; b++) {
+		if (word[b] == 'c') {
+			if (word[b + 1] == '=') {
+				lengthofword -= 1;
+			}
+			else if (word[b + 1] == '-') {
+				lengthofword -= 1;
+			}
+		}
+		if (word[b] == 'd') {
+			if (word[b + 1] == 'z' && word[b + 2] == '=') {
+				lengthofword -= 1;
+			}
+		}
+		if (word[b] == 'd') {
+			if (word[b + 1] == '-') {
+				lengthofword -= 1;
+			}
+		}
+		if (word[b] == 'l') {
+			if (word[b + 1] == 'j') {
+				lengthofword -= 1;
+			}
+		}
+		if (word[b] == 'n') {
+			if (word[b + 1] == 'j') {
+				lengthofword -= 1;
+			}
+		}
+		if (word[b] == 's') {
+			if (word[b + 1] == '=') {
+				lengthofword -= 1;
+			}
+		}
+		if (word[b] == 'z') {
+			if (word[b + 1] == '=') {
+				lengthofword -= 1;
+			}
+		}
+	}
+	printf("%d", lengthofword);
+}
