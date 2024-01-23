@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int array[9];
+    for (int a = 0; a < 9; a++) {
+        scanf("%d", &array[a]);
+    }
+    int M = array[0],index=0;
+    for (int a = 1; a < 9; a++) {
+        if (M < array[a]) {
+            M = array[a];
+            index = a;
+        }
+    }
+    printf("%d\n%d", M, index+1);
+}
