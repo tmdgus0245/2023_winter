@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int N,array[1000000],m,M;
+    scanf("%d", &N);
+    for (int a = 0; a < N; a++) {
+        scanf("%d", &array[a]);
+    }
+    m = array[0];
+    M = array[0];
+    for (int a = 0; a < N; a++) {
+        if (m > array[a])m = array[a];
+        if (M < array[a])M = array[a];
+    }
+    printf("%d %d", m, M);
+}
