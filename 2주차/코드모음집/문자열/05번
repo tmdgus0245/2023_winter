@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int N,sum=0;
+    char string[100];
+    scanf("%d", &N);
+    scanf("%s", string);
+    for (N=N-1; N >= 0; N--) {
+        sum += string[N]-48;
+    }
+    printf("%d", sum);
+}
