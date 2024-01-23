@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int a, b,count[26];
+    char alpha[26] = "abcdefghijklmnopqrstuvwxyz", word[100];
+    scanf("%s", word);
+    for ( a = 0; a < 26; a++) {
+        for ( b = 0; word[b] != 0; b++) {
+            if (alpha[a] == word[b]) {
+                count[a] = b;
+                break;
+            }
+        }
+        if (word[b] == 0) {
+            count[a] = -1;
+        }
+    }
+    for (a = 0; a < 26; a++) {
+        printf("%d ", count[a]);
+    }
+}
