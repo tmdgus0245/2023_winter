@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int N,M,array[100], s, e, n;
+    scanf("%d %d", &N, &M);
+    for (int a = 1; a <= N; a++) {
+        array[a - 1] = a;
+    }
+    int m = N;
+    for (M; M > 0; M--) {
+        scanf("%d %d", &s, &e);
+        n = array[s - 1];
+        array[s - 1] = array[e - 1];
+        array[e - 1] = n;
+    }
+    for (int a=0; a < m; a++) {
+        printf("%d ", array[a]);
+    }
+} 
