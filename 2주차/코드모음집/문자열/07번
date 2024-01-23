@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int T,R;
+    char S[20];
+    scanf("%d", &T);
+    for (T; T > 0; T--) {
+        scanf("%d %s", &R, S);
+        for (int a = 0; S[a] != 0; a++) {
+            for (int b = 0; b < R; b++) {
+                printf("%c", S[a]);
+            }
+        }
+        printf("\n");
+    }   
+}
