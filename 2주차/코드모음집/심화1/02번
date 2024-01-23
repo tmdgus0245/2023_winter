@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+	int chess[6] = { 1,1,2,2,2,8 },ours[6];
+	for (int a = 0; a < 6; a++) {
+		scanf("%d", &ours[a]);
+	}
+	for (int a = 0; a < 6; a++) {
+		chess[a] -= ours[a];
+	}
+	for (int a = 0; a < 6; a++) {
+		printf("%d ", chess[a]);
+	}
+}
