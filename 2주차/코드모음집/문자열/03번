@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int T,a=0;
+    char str[1000];
+    scanf("%d", &T);
+    for (T; T > 0; T--) {
+        scanf("%s", str);
+        for (a=0; str[a] != 0; a++) {
+
+        }
+        a -= 1;
+        printf("%c%c\n", str[0], str[a]);
+    }
+}
