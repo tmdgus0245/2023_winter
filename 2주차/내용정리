@@ -1,1 +1,8 @@
+파일 끝에 도달했을 때 scanf는 EOF를 반환하고 gets는 NULL을 반환한다.
 
+strlen 함수를 쓰기 위해서는 string.h 라이브러리를 불러줘야한다.
+strchr(string, search) 는 string 문자열에서, search 문자가 있는지 없는지를 조사한다. 만약 있다면 그 문자가 있는 위치의 주소값을 return하고, 없다면 NULL을 리턴한다. 찾고자하는 문자가 여러개라면 처음 발견되는 문자의 주소를 return한다.	
+
+strstr(string, search string) search 문자열이 있다면 search 문자열의 첫번째 문자의 주소를 리턴한다 없다면 NULL을 반환한다.
+
+strcat(string1,string2) 는 string1 뒤에 string2를 붙인다.
