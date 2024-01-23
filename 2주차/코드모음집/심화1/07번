@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main() {
+	int N, result;
+	char word[101];
+	scanf("%d", &N);
+	result = N;
+	for (N; N > 0; N--) {
+		int alpha[26] = { 0, };
+		scanf("%s", word);
+		for (int b = 0; b < 26; b++) {
+			for (int a = 0; word[a] != 0; a++) {
+				if (word[a] == (char)b + 97) {
+					alpha[b] += 1;
+					if (word[a] == word[a + 1]) {
+						alpha[b] -= 1;
+					}
+				}
+			}
+		}
+		for (int c = 0; c < 26; c++) {
+			if (alpha[c] > 1) {
+				result -= 1;
+				break;
+			}
+		}
+	}
+	printf("%d", result);
+}
