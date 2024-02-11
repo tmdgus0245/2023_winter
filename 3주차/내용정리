@@ -1,1 +1,12 @@
+이중 for문에 나오는 법
+1. 해당 기능을 함수로 빼서 return 하기
+2. flag를 세워서 차례대로 탈출하기
+3.goto함수를 써서 지정한 위치로 바로 이동하기
+ex) for(){
+	for(){
+		if() goto EXIT;
+	}
+    }
 
+EXIT:
+	printf("탈출");
