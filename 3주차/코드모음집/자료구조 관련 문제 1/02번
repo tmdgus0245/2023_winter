@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+	int k,order[1000000],array[1000000]={0,}, sum = 0, b = 0;
+	scanf("%d", &k);
+	for (int a=0; k > a; a++) {
+		scanf("%d", &order[a]);
+		if (order[a]!=0){
+			array[b] = order[a];
+			b++;
+		}
+		else {
+			b--;
+			array[b]=0;
+		}
+	}
+	for (int a = 0; k > a; a++) {
+		sum += array[a];
+	}
+	printf("%d", sum);
+}
