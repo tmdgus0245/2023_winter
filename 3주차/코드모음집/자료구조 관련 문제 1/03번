@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main() {
+	int k,a,left_count,right_count,count;
+	char s[51];
+	scanf("%d", &k);
+	for (k; k > 0; k--) {
+		scanf("%s", s);
+		a = 0;
+		left_count = 0;
+		right_count = 0;
+		while (s[a] != 0) {
+			if (s[a] == '(') {
+				left_count++;
+			}
+			else if (s[a] == ')') {
+				right_count++;
+			}
+			a++;
+		}
+		if (left_count != right_count) {
+			printf("NO\n");
+		}
+		else {
+			a = 0;
+			count = 0;
+			while (s[a] != 0) {
+				if (s[a] == '(') {
+					count++;
+				}
+				else if (s[a] == ')') {
+					count--;
+				}
+				if (count < 0) {
+					printf("NO\n");
+					break;
+				}
+				a++;
+			}
+			if (count == 0) {
+				printf("YES\n");
+			}
+		}
+	}
+}
