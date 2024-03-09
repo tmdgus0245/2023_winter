@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+	int N, array[1000000] = { 0, },front=0,back,even=0;
+	scanf("%d",&N);
+	back = N;
+	for (int a = 0; a < N; a++) {
+		array[a] = a + 1;
+	}
+	while (front != back - 1) {
+		if (even % 2 == 0) {
+			front++;
+		}
+		else {
+			array[back] = array[front];
+			front++;
+			back++;
+		}
+		even++;
+	}
+	printf("%d",array[front]);
+}
