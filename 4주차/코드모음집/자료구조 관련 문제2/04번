@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include<stdlib.h>
+int main() {
+	int deck[2000000],front=1000000,N,back=1000000;
+	char order[100003];
+	scanf("%d", &N);
+	getchar();
+	for ( N; N > 0; N--) {
+		gets(order);
+		switch (order[0]) {
+			case '1':
+				if (front == 0) {
+					for (int a = back-1; a >= 0; a--) {
+						deck[a + 1] = deck[a];
+					}
+					deck[0] = atoi(&order[2]);
+					back++;
+				}
+				else {
+					front--;
+					deck[front] = atoi(&order[2]);
+				}
+				break;
+			case '2':
+				deck[back] = atoi(&order[2]);
+				back++;
+				break;
+			case '3':
+				if (front == back) {
+					printf("-1\n");
+				}
+				else {
+					printf("%d\n", deck[front]);
+					front++;
+				}
+				break;
+			case '4':
+				if (front == back) {
+					printf("-1\n");
+				}
+				else {
+					printf("%d\n", deck[back-1]);
+					back--;
+				}
+				break;
+			case '5':
+				printf("%d\n", back - front);
+				break;
+			case '6':
+				if (back - front == 0) {
+					printf("1\n");
+				}
+				else {
+					printf("0\n");
+				}
+				break;
+			case '7':
+				if (back - front == 0) {
+					printf("-1\n");
+				}
+				else {
+					printf("%d\n",deck[front]);
+				}
+				break;
+			case '8':
+				if (back - front == 0) {
+					printf("-1\n");
+				}
+				else {
+					printf("%d\n",deck[back-1]);
+				}
+				break;
+		}
+	}
+}
