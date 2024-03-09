@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+typedef struct {
+	int x,y;
+}points;
+
+int compare(points* a, points* b) {
+	if (a->x == b->x) {
+		return (a->y - b->y);
+	}
+	return(a->x-b->x);
+}
+int main() {
+	int N;
+	points array[100000];
+	scanf("%d", &N);
+	for (int a = 0; a < N; a++) {
+		scanf("%d %d", &array[a].x, &array[a].y);
+	}
+	qsort(array, N, sizeof(points), compare);
+	for (int a = 0; a < N; a++) {
+		printf("%d %d\n", array[a].x, array[a].y);
+	}
+}
