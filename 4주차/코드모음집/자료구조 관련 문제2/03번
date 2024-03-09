@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main() {
+	int N, K, array[1000] = { 0, },step=-1,result[1000],n=0;
+	scanf("%d %d",&N,&K);
+	for (int a = 0; a < N; a++) {
+		array[a] = a + 1;
+	}
+	while (n!=N) {
+		for (int a = 0; a < K; a++) {
+			step++;
+			if (step >= N) {
+				step -= N;
+			}
+			if (array[step] == 0) {
+				while (array[step] == 0) {
+					step++;
+					if (step >= N) {
+						step -= N;
+					}
+				}
+			}
+		}
+		result[n] = array[step];
+		array[step] = 0;
+		n++;
+	}
+	printf("<");
+	for (int a = 0; a < N; a++) {
+		if (a == N - 1) {
+			printf("%d",result[a]);
+		}
+		else {
+			printf("%d, ", result[a]);
+		}
+	}
+	printf(">");
+}
