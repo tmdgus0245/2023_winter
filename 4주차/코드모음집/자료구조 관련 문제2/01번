@@ -1,1 +1,45 @@
-.
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+	int Q[2000000] = { 0, }, N, turn = 0, pop = 0;;
+	char order[12];
+	scanf("%d", &N);
+	getchar();
+	for (N; N > 0; N--) {
+		gets(order);
+		switch (order[1]) {
+			case 'u':
+				Q[turn] = atoi(&order[5]);
+				turn++;
+				break;
+			case 'o':
+				if (pop < turn) {
+					printf("%d\n", Q[pop]);
+					pop++;
+				}
+				else printf("-1\n");
+				break;
+			case 'm':
+				if (pop == turn) {
+					printf("1\n");
+				}
+				else printf("0\n");
+				break;
+			case 'i':
+				printf("%d\n", turn - pop);
+				break;
+			case 'r':
+				if (pop < turn) {
+					printf("%d\n", Q[pop]);
+				}
+				else printf("-1\n");
+				break;
+			case 'a':
+				if (pop < turn) {
+					printf("%d\n", Q[turn-1]);
+				}
+				else printf("-1\n");
+				break;
+		}
+	}
+}
