@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+	int a,c=0, N, M, queuestack[100050][2] = { 0, }, result[100050], insert[100050];
+	scanf("%d", &N);
+	for (a = 0; a < N; a++) {
+		scanf("%d", &queuestack[a][0]);
+	}
+	queuestack[a][0] = -1;
+	for (a = 0; a < N; a++) {
+		scanf("%d", &queuestack[a][1]);
+	}
+	for (N; N>0; N--) {
+		if (queuestack[N-1][0] == 0) {
+			result[c] = queuestack[N-1][1];
+			c++;
+		}
+	}
+	scanf("%d", &M);
+	for (a = 0; a < M; a++) {
+		scanf("%d", &result[a+c]);
+	}
+	for (a = 0; a < M; a++) {
+		printf("%d ", result[a]);
+	}
+}
