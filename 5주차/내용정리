@@ -1,1 +1,18 @@
+qsort 쓰는법
+stdlib를 참조하고
+qsort(배열 이름, 원소의 개수, 원소의 크기, 비교함수)
+숫자 정렬할 때: 
+int 비교함수(int* a, int* b){
+	return (*a - *b);
+좌표 정렬할 때:
+구조체를 사용해야함.
+typedef struct {
+	int x,y;
+}points;
 
+int 비교함수(points* a, points* b) {
+	if (a->x == b->x) {
+		return (a->y - b->y);
+	}
+	return(a->x-b->x);
+}
