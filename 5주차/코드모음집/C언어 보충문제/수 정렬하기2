@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include<stdlib.h>
+int compare(int* a, int* b) {
+	return(*a - *b);
+}
+
+int main() {
+	int N, array[1000000] = { 0, };
+	scanf("%d", &N);
+	for (int a = 0; a < N; a++) {
+		scanf("%d", &array[a]);
+	}
+	qsort(array, N, sizeof(int), compare);
+	for (int a = 0; a < N; a++) {
+		printf("%d\n", array[a]);
+	}
+}
